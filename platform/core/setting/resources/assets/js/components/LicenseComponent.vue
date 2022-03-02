@@ -7,6 +7,7 @@
                 </div>
                 <div class="annotated-section-description pd-all-20 p-none-t">
                     <p class="color-note">Setup license code</p>
+                    <p class="color-note">contact us info@arabcode.onlinegit </p>
                 </div>
             </div>
 
@@ -39,7 +40,7 @@
                             <label class="text-title-field" for="buyer">Your username on Envato</label>
                             <input type="text" class="next-input" v-model="buyer" id="buyer" placeholder="Your Envato's username">
                             <div>
-                                <small>Example: If your profile page is <a href="https://codecanyon.net/user/john-smith" rel="nofollow">https://codecanyon.net/user/john-smith</a>, then your username on Envato is <strong>john-smith</strong>.</small>
+                                <small>Example: If your profile page is <a href="https://arabcode.online" rel="nofollow">https://arabcode.online</a>, then your username on Arabcode is <strong>Arab-Code</strong>.</small>
                             </div>
                             <p><small class="text-danger">Note: Your site IP will be added to blacklist after 5 failed attempts.</small></p>
                         </div>
