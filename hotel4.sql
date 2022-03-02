@@ -13,6 +13,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 -- Dumping structure for table mirnda.activations
+DROP TABLE IF EXISTS `activations`;
 CREATE TABLE IF NOT EXISTS `activations` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -35,6 +36,7 @@ INSERT INTO `activations` (`id`, `user_id`, `code`, `completed`, `completed_at`,
 /*!40000 ALTER TABLE `activations` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.audit_histories
+DROP TABLE IF EXISTS `audit_histories`;
 CREATE TABLE IF NOT EXISTS `audit_histories` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -65,6 +67,7 @@ INSERT INTO `audit_histories` (`id`, `user_id`, `module`, `request`, `action`, `
 /*!40000 ALTER TABLE `audit_histories` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.categories
+DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -92,6 +95,7 @@ INSERT INTO `categories` (`id`, `name`, `parent_id`, `description`, `status`, `a
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.contacts
+DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE IF NOT EXISTS `contacts` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -111,6 +115,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.contact_replies
+DROP TABLE IF EXISTS `contact_replies`;
 CREATE TABLE IF NOT EXISTS `contact_replies` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `message` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -125,6 +130,7 @@ CREATE TABLE IF NOT EXISTS `contact_replies` (
 /*!40000 ALTER TABLE `contact_replies` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.dashboard_widgets
+DROP TABLE IF EXISTS `dashboard_widgets`;
 CREATE TABLE IF NOT EXISTS `dashboard_widgets` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -149,6 +155,7 @@ INSERT INTO `dashboard_widgets` (`id`, `name`, `created_at`, `updated_at`) VALUE
 /*!40000 ALTER TABLE `dashboard_widgets` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.dashboard_widget_settings
+DROP TABLE IF EXISTS `dashboard_widget_settings`;
 CREATE TABLE IF NOT EXISTS `dashboard_widget_settings` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `settings` text COLLATE utf8mb4_unicode_ci,
@@ -168,6 +175,7 @@ CREATE TABLE IF NOT EXISTS `dashboard_widget_settings` (
 /*!40000 ALTER TABLE `dashboard_widget_settings` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.failed_jobs
+DROP TABLE IF EXISTS `failed_jobs`;
 CREATE TABLE IF NOT EXISTS `failed_jobs` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -183,6 +191,7 @@ CREATE TABLE IF NOT EXISTS `failed_jobs` (
 /*!40000 ALTER TABLE `failed_jobs` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.galleries
+DROP TABLE IF EXISTS `galleries`;
 CREATE TABLE IF NOT EXISTS `galleries` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -210,6 +219,7 @@ INSERT INTO `galleries` (`id`, `name`, `description`, `is_featured`, `order`, `i
 /*!40000 ALTER TABLE `galleries` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.gallery_meta
+DROP TABLE IF EXISTS `gallery_meta`;
 CREATE TABLE IF NOT EXISTS `gallery_meta` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `reference_id` int(10) unsigned NOT NULL,
@@ -239,6 +249,7 @@ INSERT INTO `gallery_meta` (`id`, `reference_id`, `images`, `reference_type`, `c
 /*!40000 ALTER TABLE `gallery_meta` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_amenities
+DROP TABLE IF EXISTS `ht_amenities`;
 CREATE TABLE IF NOT EXISTS `ht_amenities` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -269,6 +280,7 @@ INSERT INTO `ht_amenities` (`id`, `name`, `icon`, `status`, `created_at`, `updat
 /*!40000 ALTER TABLE `ht_amenities` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_bookings
+DROP TABLE IF EXISTS `ht_bookings`;
 CREATE TABLE IF NOT EXISTS `ht_bookings` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `amount` decimal(15,2) NOT NULL,
@@ -290,6 +302,7 @@ CREATE TABLE IF NOT EXISTS `ht_bookings` (
 /*!40000 ALTER TABLE `ht_bookings` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_booking_addresses
+DROP TABLE IF EXISTS `ht_booking_addresses`;
 CREATE TABLE IF NOT EXISTS `ht_booking_addresses` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `first_name` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -312,6 +325,7 @@ CREATE TABLE IF NOT EXISTS `ht_booking_addresses` (
 /*!40000 ALTER TABLE `ht_booking_addresses` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_booking_rooms
+DROP TABLE IF EXISTS `ht_booking_rooms`;
 CREATE TABLE IF NOT EXISTS `ht_booking_rooms` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `booking_id` int(10) unsigned NOT NULL,
@@ -331,6 +345,7 @@ CREATE TABLE IF NOT EXISTS `ht_booking_rooms` (
 /*!40000 ALTER TABLE `ht_booking_rooms` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_booking_services
+DROP TABLE IF EXISTS `ht_booking_services`;
 CREATE TABLE IF NOT EXISTS `ht_booking_services` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `booking_id` int(10) unsigned NOT NULL,
@@ -345,6 +360,7 @@ INSERT INTO `ht_booking_services` (`id`, `booking_id`, `service_id`) VALUES
 /*!40000 ALTER TABLE `ht_booking_services` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_currencies
+DROP TABLE IF EXISTS `ht_currencies`;
 CREATE TABLE IF NOT EXISTS `ht_currencies` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -366,6 +382,7 @@ INSERT INTO `ht_currencies` (`id`, `title`, `symbol`, `is_prefix_symbol`, `decim
 /*!40000 ALTER TABLE `ht_currencies` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_customers
+DROP TABLE IF EXISTS `ht_customers`;
 CREATE TABLE IF NOT EXISTS `ht_customers` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `first_name` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -396,6 +413,7 @@ INSERT INTO `ht_customers` (`id`, `first_name`, `last_name`, `email`, `avatar`, 
 /*!40000 ALTER TABLE `ht_customers` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_features
+DROP TABLE IF EXISTS `ht_features`;
 CREATE TABLE IF NOT EXISTS `ht_features` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -420,6 +438,7 @@ INSERT INTO `ht_features` (`id`, `name`, `description`, `icon`, `is_featured`, `
 /*!40000 ALTER TABLE `ht_features` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_foods
+DROP TABLE IF EXISTS `ht_foods`;
 CREATE TABLE IF NOT EXISTS `ht_foods` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -450,6 +469,7 @@ INSERT INTO `ht_foods` (`id`, `name`, `description`, `price`, `currency_id`, `fo
 /*!40000 ALTER TABLE `ht_foods` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_food_types
+DROP TABLE IF EXISTS `ht_food_types`;
 CREATE TABLE IF NOT EXISTS `ht_food_types` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -472,6 +492,7 @@ INSERT INTO `ht_food_types` (`id`, `name`, `icon`, `status`, `created_at`, `upda
 /*!40000 ALTER TABLE `ht_food_types` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_places
+DROP TABLE IF EXISTS `ht_places`;
 CREATE TABLE IF NOT EXISTS `ht_places` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -497,6 +518,7 @@ INSERT INTO `ht_places` (`id`, `name`, `distance`, `description`, `content`, `im
 /*!40000 ALTER TABLE `ht_places` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_rooms
+DROP TABLE IF EXISTS `ht_rooms`;
 CREATE TABLE IF NOT EXISTS `ht_rooms` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -534,6 +556,7 @@ INSERT INTO `ht_rooms` (`id`, `name`, `description`, `content`, `is_featured`, `
 /*!40000 ALTER TABLE `ht_rooms` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_rooms_amenities
+DROP TABLE IF EXISTS `ht_rooms_amenities`;
 CREATE TABLE IF NOT EXISTS `ht_rooms_amenities` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `amenity_id` int(10) unsigned NOT NULL,
@@ -615,6 +638,7 @@ INSERT INTO `ht_rooms_amenities` (`id`, `amenity_id`, `room_id`, `created_at`, `
 /*!40000 ALTER TABLE `ht_rooms_amenities` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_room_categories
+DROP TABLE IF EXISTS `ht_room_categories`;
 CREATE TABLE IF NOT EXISTS `ht_room_categories` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -634,6 +658,7 @@ INSERT INTO `ht_room_categories` (`id`, `name`, `status`, `created_at`, `updated
 /*!40000 ALTER TABLE `ht_room_categories` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_room_dates
+DROP TABLE IF EXISTS `ht_room_dates`;
 CREATE TABLE IF NOT EXISTS `ht_room_dates` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `room_id` bigint(20) DEFAULT NULL,
@@ -655,6 +680,7 @@ CREATE TABLE IF NOT EXISTS `ht_room_dates` (
 /*!40000 ALTER TABLE `ht_room_dates` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_services
+DROP TABLE IF EXISTS `ht_services`;
 CREATE TABLE IF NOT EXISTS `ht_services` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -681,6 +707,7 @@ INSERT INTO `ht_services` (`id`, `name`, `description`, `content`, `price`, `cur
 /*!40000 ALTER TABLE `ht_services` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.ht_taxes
+DROP TABLE IF EXISTS `ht_taxes`;
 CREATE TABLE IF NOT EXISTS `ht_taxes` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -700,6 +727,7 @@ INSERT INTO `ht_taxes` (`id`, `title`, `percentage`, `priority`, `status`, `crea
 /*!40000 ALTER TABLE `ht_taxes` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.jobs
+DROP TABLE IF EXISTS `jobs`;
 CREATE TABLE IF NOT EXISTS `jobs` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `queue` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -717,6 +745,7 @@ CREATE TABLE IF NOT EXISTS `jobs` (
 /*!40000 ALTER TABLE `jobs` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.media_files
+DROP TABLE IF EXISTS `media_files`;
 CREATE TABLE IF NOT EXISTS `media_files` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -794,6 +823,7 @@ INSERT INTO `media_files` (`id`, `user_id`, `name`, `folder_id`, `mime_type`, `s
 /*!40000 ALTER TABLE `media_files` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.media_folders
+DROP TABLE IF EXISTS `media_folders`;
 CREATE TABLE IF NOT EXISTS `media_folders` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -822,6 +852,7 @@ INSERT INTO `media_folders` (`id`, `user_id`, `name`, `slug`, `parent_id`, `crea
 /*!40000 ALTER TABLE `media_folders` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.media_settings
+DROP TABLE IF EXISTS `media_settings`;
 CREATE TABLE IF NOT EXISTS `media_settings` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -838,6 +869,7 @@ CREATE TABLE IF NOT EXISTS `media_settings` (
 /*!40000 ALTER TABLE `media_settings` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.menus
+DROP TABLE IF EXISTS `menus`;
 CREATE TABLE IF NOT EXISTS `menus` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -858,6 +890,7 @@ INSERT INTO `menus` (`id`, `name`, `slug`, `status`, `created_at`, `updated_at`)
 /*!40000 ALTER TABLE `menus` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.menu_locations
+DROP TABLE IF EXISTS `menu_locations`;
 CREATE TABLE IF NOT EXISTS `menu_locations` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `menu_id` int(10) unsigned NOT NULL,
@@ -875,6 +908,7 @@ INSERT INTO `menu_locations` (`id`, `menu_id`, `location`, `created_at`, `update
 /*!40000 ALTER TABLE `menu_locations` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.menu_nodes
+DROP TABLE IF EXISTS `menu_nodes`;
 CREATE TABLE IF NOT EXISTS `menu_nodes` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `menu_id` int(10) unsigned NOT NULL,
@@ -924,6 +958,7 @@ INSERT INTO `menu_nodes` (`id`, `menu_id`, `parent_id`, `reference_id`, `referen
 /*!40000 ALTER TABLE `menu_nodes` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.meta_boxes
+DROP TABLE IF EXISTS `meta_boxes`;
 CREATE TABLE IF NOT EXISTS `meta_boxes` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `reference_id` int(10) unsigned NOT NULL,
@@ -960,6 +995,7 @@ INSERT INTO `meta_boxes` (`id`, `reference_id`, `meta_key`, `meta_value`, `refer
 /*!40000 ALTER TABLE `meta_boxes` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.migrations
+DROP TABLE IF EXISTS `migrations`;
 CREATE TABLE IF NOT EXISTS `migrations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1029,6 +1065,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.pages
+DROP TABLE IF EXISTS `pages`;
 CREATE TABLE IF NOT EXISTS `pages` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1060,6 +1097,7 @@ INSERT INTO `pages` (`id`, `name`, `content`, `user_id`, `image`, `template`, `i
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.password_resets
+DROP TABLE IF EXISTS `password_resets`;
 CREATE TABLE IF NOT EXISTS `password_resets` (
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1072,6 +1110,7 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
 /*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.payments
+DROP TABLE IF EXISTS `payments`;
 CREATE TABLE IF NOT EXISTS `payments` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `amount` decimal(15,2) unsigned NOT NULL,
@@ -1097,6 +1136,7 @@ CREATE TABLE IF NOT EXISTS `payments` (
 /*!40000 ALTER TABLE `payments` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.posts
+DROP TABLE IF EXISTS `posts`;
 CREATE TABLE IF NOT EXISTS `posts` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1124,6 +1164,7 @@ INSERT INTO `posts` (`id`, `name`, `description`, `content`, `status`, `author_i
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.post_categories
+DROP TABLE IF EXISTS `post_categories`;
 CREATE TABLE IF NOT EXISTS `post_categories` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `category_id` int(10) unsigned NOT NULL,
@@ -1141,6 +1182,7 @@ INSERT INTO `post_categories` (`id`, `category_id`, `post_id`) VALUES
 /*!40000 ALTER TABLE `post_categories` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.post_tags
+DROP TABLE IF EXISTS `post_tags`;
 CREATE TABLE IF NOT EXISTS `post_tags` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `tag_id` int(10) unsigned NOT NULL,
@@ -1162,6 +1204,7 @@ INSERT INTO `post_tags` (`id`, `tag_id`, `post_id`) VALUES
 /*!40000 ALTER TABLE `post_tags` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.revisions
+DROP TABLE IF EXISTS `revisions`;
 CREATE TABLE IF NOT EXISTS `revisions` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `revisionable_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1195,6 +1238,7 @@ INSERT INTO `revisions` (`id`, `revisionable_type`, `revisionable_id`, `user_id`
 /*!40000 ALTER TABLE `revisions` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.roles
+DROP TABLE IF EXISTS `roles`;
 CREATE TABLE IF NOT EXISTS `roles` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `slug` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1217,6 +1261,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.role_users
+DROP TABLE IF EXISTS `role_users`;
 CREATE TABLE IF NOT EXISTS `role_users` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -1233,6 +1278,7 @@ CREATE TABLE IF NOT EXISTS `role_users` (
 /*!40000 ALTER TABLE `role_users` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.settings
+DROP TABLE IF EXISTS `settings`;
 CREATE TABLE IF NOT EXISTS `settings` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1358,6 +1404,7 @@ INSERT INTO `settings` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.slugs
+DROP TABLE IF EXISTS `slugs`;
 CREATE TABLE IF NOT EXISTS `slugs` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1416,6 +1463,7 @@ INSERT INTO `slugs` (`id`, `key`, `reference_id`, `reference_type`, `prefix`, `c
 /*!40000 ALTER TABLE `slugs` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.subscriptions
+DROP TABLE IF EXISTS `subscriptions`;
 CREATE TABLE IF NOT EXISTS `subscriptions` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) unsigned NOT NULL,
@@ -1437,6 +1485,7 @@ CREATE TABLE IF NOT EXISTS `subscriptions` (
 /*!40000 ALTER TABLE `subscriptions` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.subscription_items
+DROP TABLE IF EXISTS `subscription_items`;
 CREATE TABLE IF NOT EXISTS `subscription_items` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `subscription_id` bigint(20) unsigned NOT NULL,
@@ -1455,6 +1504,7 @@ CREATE TABLE IF NOT EXISTS `subscription_items` (
 /*!40000 ALTER TABLE `subscription_items` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.tags
+DROP TABLE IF EXISTS `tags`;
 CREATE TABLE IF NOT EXISTS `tags` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1475,6 +1525,7 @@ INSERT INTO `tags` (`id`, `name`, `author_id`, `author_type`, `description`, `st
 /*!40000 ALTER TABLE `tags` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.testimonials
+DROP TABLE IF EXISTS `testimonials`;
 CREATE TABLE IF NOT EXISTS `testimonials` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1496,6 +1547,7 @@ INSERT INTO `testimonials` (`id`, `name`, `content`, `image`, `created_at`, `upd
 /*!40000 ALTER TABLE `testimonials` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.translations
+DROP TABLE IF EXISTS `translations`;
 CREATE TABLE IF NOT EXISTS `translations` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `status` int(11) NOT NULL DEFAULT '0',
@@ -4142,6 +4194,7 @@ INSERT INTO `translations` (`id`, `status`, `locale`, `group`, `key`, `value`, `
 /*!40000 ALTER TABLE `translations` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.users
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -4175,6 +4228,7 @@ INSERT INTO `users` (`id`, `email`, `email_verified_at`, `password`, `remember_t
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.user_meta
+DROP TABLE IF EXISTS `user_meta`;
 CREATE TABLE IF NOT EXISTS `user_meta` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -4191,6 +4245,7 @@ CREATE TABLE IF NOT EXISTS `user_meta` (
 /*!40000 ALTER TABLE `user_meta` ENABLE KEYS */;
 
 -- Dumping structure for table mirnda.widgets
+DROP TABLE IF EXISTS `widgets`;
 CREATE TABLE IF NOT EXISTS `widgets` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `widget_id` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
