@@ -294,7 +294,7 @@ class SettingController extends BaseController
 
             return $response
                 ->setError(true)
-                ->setMessage(__('Envato username must not a URL. Please try with username ":username"!', compact('username')));
+                ->setMessage(__('arabcode username must not a URL. Please try with username ":username"!', compact('username')));
         }
 
         try {

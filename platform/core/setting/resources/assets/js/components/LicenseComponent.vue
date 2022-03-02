@@ -30,15 +30,15 @@
                                     <label class="text-title-field" for="purchase_code">Purchase code</label>
                                 </div>
                                 <div class="float-right text-right">
-                                    <small><a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code" target="_blank">What's this?</a></small>
+                                    <small><a href="https://help.market.arabcode.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code" target="_blank">What's this?</a></small>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                             <input type="text" class="next-input" v-model="purchaseCode" id="purchase_code" placeholder="Ex: 10101010-10aa-0101-a1b1010a01b10">
                         </div>
                         <div class="form-group">
-                            <label class="text-title-field" for="buyer">Your username on Envato</label>
-                            <input type="text" class="next-input" v-model="buyer" id="buyer" placeholder="Your Envato's username">
+                            <label class="text-title-field" for="buyer">Your username on arabcode</label>
+                            <input type="text" class="next-input" v-model="buyer" id="buyer" placeholder="Your arabcode's username">
                             <div>
                                 <small>Example: If your profile page is <a href="https://arabcode.online" rel="nofollow">https://arabcode.online</a>, then your username on Arabcode is <strong>Arab-Code</strong>.</small>
                             </div>
